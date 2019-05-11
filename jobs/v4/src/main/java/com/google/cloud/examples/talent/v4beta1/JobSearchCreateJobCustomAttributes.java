@@ -22,7 +22,12 @@ import org.apache.commons.cli.Options;
  * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
  */
 public class JobSearchCreateJobCustomAttributes {
-  /** Create Job with Custom Attributes */
+  /**
+   * Create Job with Custom Attributes
+   *
+   * @param projectId Your Google Cloud Project ID
+   * @param tenantId Identifier of the Tenantd
+   */
   public static void sampleCreateJob(
       String projectId,
       String tenantId,

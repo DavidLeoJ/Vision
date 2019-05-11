@@ -28,7 +28,12 @@ import org.apache.commons.cli.Options;
  * import java.util.List;
  */
 public class JobSearchAutocompleteJobTitle {
-  /** Complete job title given partial text (autocomplete) */
+  /**
+   * Complete job title given partial text (autocomplete)
+   *
+   * @param projectId Your Google Cloud Project ID
+   * @param tenantId Identifier of the Tenantd
+   */
   public static void sampleCompleteQuery(
       String projectId, String tenantId, String query, int numResults, String languageCode) {
     // [START job_search_autocomplete_job_title_core]

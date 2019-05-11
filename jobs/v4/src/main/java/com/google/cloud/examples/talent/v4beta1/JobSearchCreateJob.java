@@ -28,7 +28,12 @@ import org.apache.commons.cli.Options;
  * import java.util.List;
  */
 public class JobSearchCreateJob {
-  /** Create Job */
+  /**
+   * Create Job
+   *
+   * @param projectId Your Google Cloud Project ID
+   * @param tenantId Identifier of the Tenant
+   */
   public static void sampleCreateJob(
       String projectId,
       String tenantId,
