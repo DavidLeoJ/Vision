@@ -1,3 +1,18 @@
+/*
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 // DO NOT EDIT! This is a generated sample ("RequestPaged",  "job_search_list_tenants")
 package com.google.cloud.examples.talent.v4beta1;
 
@@ -10,21 +25,22 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-// [START job_search_list_tenants]
-/*
- * Please include the following imports to run this sample.
- *
- * import com.google.cloud.talent.v4beta1.ListTenantsRequest;
- * import com.google.cloud.talent.v4beta1.ProjectName;
- * import com.google.cloud.talent.v4beta1.Tenant;
- * import com.google.cloud.talent.v4beta1.TenantServiceClient;
- */
 public class JobSearchListTenants {
+  // [START job_search_list_tenants]
+  /*
+   * Please include the following imports to run this sample.
+   *
+   * import com.google.cloud.talent.v4beta1.ListTenantsRequest;
+   * import com.google.cloud.talent.v4beta1.ProjectName;
+   * import com.google.cloud.talent.v4beta1.Tenant;
+   * import com.google.cloud.talent.v4beta1.TenantServiceClient;
+   */
+
   /** List Tenants */
   public static void sampleListTenants(String projectId) {
     // [START job_search_list_tenants_core]
     try (TenantServiceClient tenantServiceClient = TenantServiceClient.create()) {
-      // String projectId = "Your Google Cloud Project ID";
+      // projectId = "Your Google Cloud Project ID";
       ProjectName parent = ProjectName.of(projectId);
       ListTenantsRequest request =
           ListTenantsRequest.newBuilder().setParent(parent.toString()).build();
@@ -37,6 +53,7 @@ public class JobSearchListTenants {
     }
     // [END job_search_list_tenants_core]
   }
+  // [END job_search_list_tenants]
 
   public static void main(String[] args) throws Exception {
     Options options = new Options();
@@ -49,6 +66,3 @@ public class JobSearchListTenants {
     sampleListTenants(projectId);
   }
 }
-// FIXME: Insert here clean-up code.
-
-// [END job_search_list_tenants]

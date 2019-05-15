@@ -1,3 +1,18 @@
+/*
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 // DO NOT EDIT! This is a generated sample ("RequestPaged",  "job_search_custom_ranking_search")
 package com.google.cloud.examples.talent.v4beta1;
 
@@ -14,21 +29,22 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-// [START job_search_custom_ranking_search]
-/*
- * Please include the following imports to run this sample.
- *
- * import com.google.cloud.talent.v4beta1.Job;
- * import com.google.cloud.talent.v4beta1.JobServiceClient;
- * import com.google.cloud.talent.v4beta1.RequestMetadata;
- * import com.google.cloud.talent.v4beta1.SearchJobsRequest;
- * import com.google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo;
- * import com.google.cloud.talent.v4beta1.SearchJobsRequest;
- * import com.google.cloud.talent.v4beta1.SearchJobsResponse.MatchingJob;
- * import com.google.cloud.talent.v4beta1.TenantName;
- * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
- */
 public class JobSearchCustomRankingSearch {
+  // [START job_search_custom_ranking_search]
+  /*
+   * Please include the following imports to run this sample.
+   *
+   * import com.google.cloud.talent.v4beta1.Job;
+   * import com.google.cloud.talent.v4beta1.JobServiceClient;
+   * import com.google.cloud.talent.v4beta1.RequestMetadata;
+   * import com.google.cloud.talent.v4beta1.SearchJobsRequest;
+   * import com.google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo;
+   * import com.google.cloud.talent.v4beta1.SearchJobsRequest;
+   * import com.google.cloud.talent.v4beta1.SearchJobsResponse.MatchingJob;
+   * import com.google.cloud.talent.v4beta1.TenantName;
+   * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
+   */
+
   /**
    * Search Jobs using custom rankings
    *
@@ -38,8 +54,8 @@ public class JobSearchCustomRankingSearch {
   public static void sampleSearchJobs(String projectId, String tenantId) {
     // [START job_search_custom_ranking_search_core]
     try (JobServiceClient jobServiceClient = JobServiceClient.create()) {
-      // String projectId = "Your Google Cloud Project ID";
-      // String tenantId = "Your Tenant ID (using tenancy is optional)";
+      // projectId = "Your Google Cloud Project ID";
+      // tenantId = "Your Tenant ID (using tenancy is optional)";
       TenantOrProjectName parent = TenantName.of(projectId, tenantId);
       String domain = "www.example.com";
       String sessionId = "Hashed session identifier";
@@ -79,6 +95,7 @@ public class JobSearchCustomRankingSearch {
     }
     // [END job_search_custom_ranking_search_core]
   }
+  // [END job_search_custom_ranking_search]
 
   public static void main(String[] args) throws Exception {
     Options options = new Options();
@@ -93,6 +110,3 @@ public class JobSearchCustomRankingSearch {
     sampleSearchJobs(projectId, tenantId);
   }
 }
-// FIXME: Insert here clean-up code.
-
-// [END job_search_custom_ranking_search]

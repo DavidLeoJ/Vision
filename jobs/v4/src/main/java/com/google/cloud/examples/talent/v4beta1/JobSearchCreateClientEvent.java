@@ -1,3 +1,18 @@
+/*
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 // DO NOT EDIT! This is a generated sample ("Request",  "job_search_create_client_event")
 package com.google.cloud.examples.talent.v4beta1;
 
@@ -15,22 +30,23 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-// [START job_search_create_client_event]
-/*
- * Please include the following imports to run this sample.
- *
- * import com.google.cloud.talent.v4beta1.ClientEvent;
- * import com.google.cloud.talent.v4beta1.CreateClientEventRequest;
- * import com.google.cloud.talent.v4beta1.EventServiceClient;
- * import com.google.cloud.talent.v4beta1.JobEvent;
- * import com.google.cloud.talent.v4beta1.JobEvent;
- * import com.google.cloud.talent.v4beta1.TenantName;
- * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
- * import com.google.protobuf.Timestamp;
- * import java.util.Arrays;
- * import java.util.List;
- */
 public class JobSearchCreateClientEvent {
+  // [START job_search_create_client_event]
+  /*
+   * Please include the following imports to run this sample.
+   *
+   * import com.google.cloud.talent.v4beta1.ClientEvent;
+   * import com.google.cloud.talent.v4beta1.CreateClientEventRequest;
+   * import com.google.cloud.talent.v4beta1.EventServiceClient;
+   * import com.google.cloud.talent.v4beta1.JobEvent;
+   * import com.google.cloud.talent.v4beta1.JobEvent;
+   * import com.google.cloud.talent.v4beta1.TenantName;
+   * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
+   * import com.google.protobuf.Timestamp;
+   * import java.util.Arrays;
+   * import java.util.List;
+   */
+
   /**
    * Creates a client event
    *
@@ -44,10 +60,10 @@ public class JobSearchCreateClientEvent {
       String projectId, String tenantId, String requestId, String eventId) {
     // [START job_search_create_client_event_core]
     try (EventServiceClient eventServiceClient = EventServiceClient.create()) {
-      // String projectId = "Your Google Cloud Project ID";
-      // String tenantId = "Your Tenant ID (using tenancy is optional)";
-      // String requestId = "[request_id from ResponseMetadata]";
-      // String eventId = "[Set this to a unique identifier]";
+      // projectId = "Your Google Cloud Project ID";
+      // tenantId = "Your Tenant ID (using tenancy is optional)";
+      // requestId = "[request_id from ResponseMetadata]";
+      // eventId = "[Set this to a unique identifier]";
       TenantOrProjectName parent = TenantName.of(projectId, tenantId);
 
       // The timestamp of the event as seconds of UTC time since Unix epoch
@@ -83,6 +99,7 @@ public class JobSearchCreateClientEvent {
     }
     // [END job_search_create_client_event_core]
   }
+  // [END job_search_create_client_event]
 
   public static void main(String[] args) throws Exception {
     Options options = new Options();
@@ -102,6 +119,3 @@ public class JobSearchCreateClientEvent {
     sampleCreateClientEvent(projectId, tenantId, requestId, eventId);
   }
 }
-// FIXME: Insert here clean-up code.
-
-// [END job_search_create_client_event]

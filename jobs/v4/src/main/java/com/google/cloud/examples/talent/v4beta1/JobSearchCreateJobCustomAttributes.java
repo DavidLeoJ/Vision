@@ -1,3 +1,18 @@
+/*
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 // DO NOT EDIT! This is a generated sample ("Request",  "job_search_create_job_custom_attributes")
 package com.google.cloud.examples.talent.v4beta1;
 
@@ -11,17 +26,18 @@ import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-// [START job_search_create_job_custom_attributes]
-/*
- * Please include the following imports to run this sample.
- *
- * import com.google.cloud.talent.v4beta1.CreateJobRequest;
- * import com.google.cloud.talent.v4beta1.Job;
- * import com.google.cloud.talent.v4beta1.JobServiceClient;
- * import com.google.cloud.talent.v4beta1.TenantName;
- * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
- */
 public class JobSearchCreateJobCustomAttributes {
+  // [START job_search_create_job_custom_attributes]
+  /*
+   * Please include the following imports to run this sample.
+   *
+   * import com.google.cloud.talent.v4beta1.CreateJobRequest;
+   * import com.google.cloud.talent.v4beta1.Job;
+   * import com.google.cloud.talent.v4beta1.JobServiceClient;
+   * import com.google.cloud.talent.v4beta1.TenantName;
+   * import com.google.cloud.talent.v4beta1.TenantOrProjectName;
+   */
+
   /**
    * Create Job with Custom Attributes
    *
@@ -36,11 +52,11 @@ public class JobSearchCreateJobCustomAttributes {
       String languageCode) {
     // [START job_search_create_job_custom_attributes_core]
     try (JobServiceClient jobServiceClient = JobServiceClient.create()) {
-      // String projectId = "Your Google Cloud Project ID";
-      // String tenantId = "Your Tenant ID (using tenancy is optional)";
-      // String companyName = "Company name, e.g. projects/your-project/companies/company-id";
-      // String requisitionId = "Job requisition ID, aka Posting ID. Unique per job.";
-      // String languageCode = "en-US";
+      // projectId = "Your Google Cloud Project ID";
+      // tenantId = "Your Tenant ID (using tenancy is optional)";
+      // companyName = "Company name, e.g. projects/your-project/companies/company-id";
+      // requisitionId = "Job requisition ID, aka Posting ID. Unique per job.";
+      // languageCode = "en-US";
       TenantOrProjectName parent = TenantName.of(projectId, tenantId);
       Job job =
           Job.newBuilder()
@@ -57,6 +73,7 @@ public class JobSearchCreateJobCustomAttributes {
     }
     // [END job_search_create_job_custom_attributes_core]
   }
+  // [END job_search_create_job_custom_attributes]
 
   public static void main(String[] args) throws Exception {
     Options options = new Options();
@@ -83,6 +100,3 @@ public class JobSearchCreateJobCustomAttributes {
     sampleCreateJob(projectId, tenantId, companyName, requisitionId, languageCode);
   }
 }
-// FIXME: Insert here clean-up code.
-
-// [END job_search_create_job_custom_attributes]
